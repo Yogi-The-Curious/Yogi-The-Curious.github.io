@@ -5,30 +5,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 .w3-bar-block .w3-bar-item {padding:20px}
 </style>
 <body>
 
-<!-- Sidebar (hidden by default) -->
-<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()"
-  class="w3-bar-item w3-button">Close Menu</a>
-  <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button">Home Page</a>
-  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">Jupyter Labs (soon)</a>
-  <a href = "#" onclick="w3_close()" class="w3-bar-item w3-button">Thermal Study of Battery</a>
-  <a href="Thermal Study of Lithium Battery (1).html" onclick="w3_close()" class="w3-bar-item w3-button">Python Projects (coming soon)</a>
-</nav>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<!-- Top menu -->
-<div class="w3-top">
-  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
-    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
-    <!--<div class="w3-right w3-padding-16">Mail</div> -->
-    <div class="w3-center w3-padding-16">My Scratch Projects</div>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="jumbotron">
+    <div class="container" style="text-align: center;">
+      <h1 class="display-3">Scratch</h1>
+      <p>Dont forget to post your highscore on Dodge em Dot!</p>
+    </div>
   </div>
-</div>
   
 <!-- !PAGE CONTENT! -->
 <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
@@ -37,19 +41,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   <div class="w3-row-padding w3-padding-16 w3-center" id="food">
     <div class="w3-third">
       <!--<img src="images/dodgeemdot.png" href = "https://scratch.mit.edu/projects/429113060" alt="Dodgem!" style="width:100%"> -->
-      <iframe src="https://scratch.mit.edu/projects/429113060/embed" allowtransparency="true" width="385" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      <iframe src="https://scratch.mit.edu/projects/429113060/embed" allowtransparency="true" width="365" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
       <a href="https://scratch.mit.edu/projects/429113060"><h3>Dodgem Dot</h3></a>
       <p>Dots having a tough day in space, don't let him down!</p>
     </div>
     <div class="w3-third">
       <!--<img src="images/ball_game.png" href="https://scratch.mit.edu/projects/428377279" alt="ball game" style="width:100%"> -->
-      <iframe src="https://scratch.mit.edu/projects/428377279/embed" allowtransparency="true" width="385" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      <iframe src="https://scratch.mit.edu/projects/428377279/embed" allowtransparency="true" width="365" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
       <a href="https://scratch.mit.edu/projects/428377279"><h3>1st Scratch Program</h3></a>
       <p>Hit the balls!!</p>
     </div>
     <div class="w3-third">
       <!-- <img src="images/traverse.png" alt="" style="width:100%"> -->
-      <iframe src="https://scratch.mit.edu/projects/429219035/embed" allowtransparency="true" width="385" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+      <iframe src="https://scratch.mit.edu/projects/429219035/embed" allowtransparency="true" width="365" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
       <a href="https://scratch.mit.edu/projects/429219035"> <h3>Traverse Remix</h3></a>
       <p>A simple solution</p>
     </div>
