@@ -14502,7 +14502,8 @@ $$T_{f} = (T_{i} + \frac{I^{2}Rt}{mc}) - (k(T_{i} - T_{a}))$$</p>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Model-Two-(Newtons-Cooling)">Model Two (Newtons Cooling)<a class="anchor-link" href="#Model-Two-(Newtons-Cooling)">&#182;</a></h3><p><p>The second model adds Newton's cooling equation to represent convective cooling. We assume a 25 Celsius ambient temperature and -10 C initial battery temperature, 1C and 5C discharge current. These values were used to compare results of similar study "Internal Temperature Prediction of Lithium-ion Cell
+<h3 id="Model-Two-(Newtons-Cooling)">Model Two (Newtons Cooling)<a class="anchor-link" href="#Model-Two-(Newtons-Cooling)">&#182;</a></h3><p><p>The second model adds Newton's cooling equation to represent convective cooling. We assume a 25 Celsius ambient temperature and -10 C initial battery temperature, 1C and 5C discharge current. A quick note on battery discharge measurements: The C unit commonly used in battery studies is a measurment of how long it takes to discharge a battery in one hour. For the 18650 battery we used here 1C equates to a 2.5A current, as our battery is rated at 2500mAh.</p>
+<p>These values were used to compare results of similar study "Internal Temperature Prediction of Lithium-ion Cell
 Using Differential Voltage Technique".</p>
 <p><p> We were iterating over time, and so we shrank time by increasing our iterations. We therfore multiplied over the dt that is found in the orginial differential cooling equation. We can do this in our loop but not on a piece of paper because we are constantly updating the temperature of our battery with each increment of time. Something a human couldn't do. 
 This is how we inserted the cooling term into our code. 
@@ -14607,9 +14608,8 @@ This is how we inserted the cooling term into our code.
 <p>Taking a look at this graph from "Internal Temperature Prediction of Lithium-ion Cell
 Using Differential Voltage Technique" Which can be found in the resources.</p>
 <p>&nbsp;</p>
-We can see intially the x axis are different, however we can ignore this for now as we see the behavior of both graphs is bounded and we will focus on the end conditions. 
-    We see the general shape of the graph is very close, the temperatures are within 10C of the internal temps of this model.
-    We can expect our model to further fit the graph as we have not yet accounted for the decrease in resistance over the rise of temperature. 
+We can see intially the x axis are different. The horizontal scale of our reference graph is an energy unit $power * time$. Looking at our 5C line from our data we have $(12.5A^{2}*.013Ohms)=2Watts$. If we wanted to turn this into watt hours we would multiply this number by hours. What our graph is really showing in comparison to the reference is a asymptote at 2Wh. A significantly larger slope compared to the reference. Some explanation for this is the large discrepency in masses between the batteries of each model. We can note the reference models mass is a magnitude greater than our models battery. The reference model accounts for additional cooling terms which have not yet been approached in this study. Both of these factors can be expected to bring our graph closer in line with the reference graph below. For now we will use this reference graph to compare our end conditions taking note of the similar bounded behavior and the final temperatures. The final temperatures of our model are within 10C of the internal temps of this model.
+We can expect our model to further fit the graph as we have not yet accounted for the decrease in resistance over the rise of temperature. 
   <p>&nbsp;</p>
 </div>
 </div>
