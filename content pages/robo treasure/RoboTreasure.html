@@ -14263,13 +14263,15 @@ a.anchor-link {
 then 20 each way and so on incrementing by 10 each time.</p>
 <h5 id="Algorithm-2">Algorithm 2<a class="anchor-link" href="#Algorithm-2">&#182;</a></h5><p>Bot travels out 10 meters and then back, repeats in the opposite direction.
 Then goes out $\large e^{\frac{t}{10}}$ further and then the same distance in the opposite direction,
-increasing distance logarithmically until the energy is found.</p>
+increasing distance exponentially until the energy is found.</p>
+<h5 id="Some-analysis">Some analysis<a class="anchor-link" href="#Some-analysis">&#182;</a></h5><p>The starting direction of the robot does matter some if we wish to think in case by case terms. If the energy is on the side the robot starts out on it will reach the energy with less total distance traveled then our following calculations would tell you. However this is just one instance. If we think in terms of the general behavior of the problem, that half the time the energy will be in the opposite direction the robot starts in, then we can say that no it does not matter so much which direction the robot starts for our data to be meaningfull.</p>
+<p>Another interesting occurence in these algorithms is that the linear algorithm data set corrseponds to the exponential curve in the graph and the exponential alg data set corrseponds to the linear curve of the graph. This inverse relationship is very intruiging.</p>
 <h5 id="Coding-these-algorithms">Coding these algorithms<a class="anchor-link" href="#Coding-these-algorithms">&#182;</a></h5>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Thinking of two algorithms to meet the conditions provided in the robot treasure hunt problem</span>
@@ -14301,7 +14303,7 @@ increasing distance logarithmically until the energy is found.</p>
 <span class="sd">    utilizing our second algorithm:</span>
 <span class="sd">    Bot travels out 10 meters and then back, repeats in the opposite direction.</span>
 <span class="sd">     Then goes out e**(t/10) further and the same in the opposite direction,</span>
-<span class="sd">    increasing logarithmically until the parameter is met.  </span>
+<span class="sd">    increasing exponentially until the parameter is met.  </span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">dist_reached</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">increment</span> <span class="o">=</span> <span class="mi">0</span>
