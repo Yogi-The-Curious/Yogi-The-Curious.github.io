@@ -1,36 +1,46 @@
-#from tabulate import tabulate
-from decimal import *
-getcontext().prec = 2 #setting precision of decimals to 2 for currency operations
+import numpy as np
 
-print("Gas milegae calculator!")
-def calc(gas,mileage):
-    ''' input: int,int
-        return: tuple(int,int)
+dist_arr = np.array([])
+gas_arr = np.array([])
+mpg = 34
+gas2_arr = np.array([])
+
+
+for num in range(8,51):
+    gas_arr = np.append(gas_arr, [num])
+
+for num in range(28,35):
+    gas2_arr = np.append(gas2_arr, [num])
+
+
+def rangecalc(gas_arr, dist_arr, mpg):
+
+    for gal in gas_arr:
+        dist = gal*mpg
+        dist_arr = np.append(dist_arr,[dist])
+    return dist_arr
+
+
+dist1_arr = rangecalc(gas_arr,dist_arr,mpg)
+dist2_arr = rangecalc(gas2_arr, dist_arr,mpg)
+
+print(dist1_arr)
+print(dist2_arr)
+
+
+ 
+
+
+
+def caluclations():
+ypos_arr = np.array([])
+ ## takeoff()
+    for t in time:
+        calculations 
         
-        takes gas and mileage and divides them to return miles/gal and gal/mile'''
-
-    gpm = Decimal(gas/mileage)
-    mpg = Decimal(mileage/gas)
-    return (mpg,gpm)
+        if y < ypos_arr[t-1]
+            return xpos,ypos,xvel,yvel, t
 
 
-def price_per (gpm,price):
-    ''' input int, decimal
-        return decimal
-        multiplies mpg by price.'''
-
-    ppm = Decimal(gpm * price)
-    return ppm
-
-gas = Decimal(input("Please enter Gallons\n"))
-mileage = Decimal(input("Please enter miles\n"))
-price = Decimal(input("Please enter cost per gallon\n"))
-
-calcul_1 = calc(gas,mileage)
-ppm = price_per(calcul_1[1],price)
-
-#print(tabulate([[calcul_1[1]],[calcul_1[2]],[ppm]], headers=['MPG','Gallons/Mile',"$/Mile"], tablefmt='orgtbl'))
-
-print("\nMiles Per Gallon: ", calcul_1[0] ,"\nCost Per Mile: $", ppm)
-
-print("hello World")
+def nextcalc(xpos,ypos,xvel,yvel)
+    for time in range(t,finaltime)
